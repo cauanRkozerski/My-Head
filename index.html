@@ -3,90 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cauan Roza | Portfólio & Perfil</title>
+  <title>Cauan Roza | My-Head (GitFlow & GSAP)</title>
+  
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <header class="profile-header">
-      <div class="avatar-container">
-        <img src="https://github.com/cauanRkozerski.png" alt="Foto de perfil de Cauan" class="avatar">
+  <div class="main-wrapper">
+    
+    <!-- Hero / Animação Head-Spinning & Perfil -->
+    <header class="hero-section">
+      <div class="spinning-frame">
+        <a href="readme.html" title="Clique para ver o README original da aula anterior">
+          <img id="head-img" class="head-avatar" src="img/cabeca.jpg" alt="Cabeça Giratória - Animação GSAP">
+        </a>
       </div>
-      <h1 class="name">Cauan Roza Kozerski</h1>
-      <p class="role">Estudante de Sistemas de Informação (4º Período)</p>
-      <p class="tagline">Focado em desenvolvimento web, boas práticas de engenharia de software e banco de dados.</p>
+
+      <!-- Controles interativos da animação GSAP -->
+      <div class="animation-controls">
+        <button id="btn-toggle-spin" class="ctrl-btn" type="button">
+          <span class="btn-icon">⏸️</span> Pausar
+        </button>
+        <button id="btn-speed-up" class="ctrl-btn" type="button">
+          <span class="btn-icon">⚡</span> + Rápido
+        </button>
+        <button id="btn-slow-down" class="ctrl-btn" type="button">
+          <span class="btn-icon">🐢</span> + Lento
+        </button>
+        <button id="btn-switch-img" class="ctrl-btn" type="button">
+          <span class="btn-icon">🔄</span> Alternar: Avatar Cauan
+        </button>
+        <span class="speed-badge">Velocidade: <span id="speed-label">1.0x</span></span>
+      </div>
+
+      <h1 class="profile-name">Cauan Roza Kozerski</h1>
+      <p class="profile-role">Acadêmico de Sistemas de Informação</p>
+      <p class="profile-tagline">
+        Projeto prático integrando a animação <strong>head-spinning</strong> da aula com o fluxo <strong>GitFlow</strong> e deploy no GitHub Pages.
+      </p>
     </header>
 
     <main>
-      <!-- Seção Sobre -->
-      <section id="sobre" class="card">
-        <h2>🧑‍💻 Sobre mim</h2>
-        <p>Sou acadêmico do curso de Sistemas de Informação. Gosto de resolver problemas através do código, criar interfaces funcionais e estudar versionamento com Git e fluxo GitFlow.</p>
+      <!-- Seção Sobre a Atividade -->
+      <section class="card-box">
+        <h2 class="card-title">
+          <span class="icon-heading">🎓</span> Sobre o Projeto My-Head
+        </h2>
+        <p class="card-text">
+          Este projeto foi desenvolvido como atividade prática universitária para aplicação do modelo de ramificação <strong>GitFlow</strong>, criação de <strong>Pull Requests</strong> estruturados com template e publicação contínua através do <strong>GitHub Pages</strong>.
+        </p>
+        <p class="card-text mt-2">
+          Utilizamos como base o projeto <em>head-spinning</em> desenvolvido na aula anterior com <strong>GSAP (GreenSock)</strong>, personalizando o layout e integrando novos recursos interativos.
+        </p>
       </section>
 
-      <!-- Seção Links Rápidos / Contato -->
-      <section id="links" class="card">
-        <h2>🔗 Conecte-se comigo</h2>
-        <div class="links-list">
-          <a href="https://github.com/cauanRkozerski" target="_blank" rel="noopener noreferrer" class="link-item">
-            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <!-- Seção GitFlow & Versionamento -->
+      <section class="card-box">
+        <h2 class="card-title">
+          <span class="icon-heading">🌿</span> Fluxo GitFlow Aplicado
+        </h2>
+        <ul class="gitflow-list">
+          <li><strong>Branch <code>main</code>:</strong> Versão estável em produção publicada via GitHub Pages.</li>
+          <li><strong>Branch <code>develop</code>:</strong> Ambiente de integração de novas funcionalidades.</li>
+          <li><strong>Branches <code>feature/*</code>:</strong> Desenvolvimento isolado de recursos (ex: animação, estilos e componentes).</li>
+          <li><strong>Pull Requests Padronizados:</strong> Revisão com checklist e template documentado.</li>
+        </ul>
+      </section>
+
+      <!-- Seção Tecnologias -->
+      <section class="card-box">
+        <h2 class="card-title">
+          <span class="icon-heading">🛠️</span> Tecnologias e Bibliotecas
+        </h2>
+        <div class="tech-grid">
+          <span class="tech-badge">HTML5 Semântico</span>
+          <span class="tech-badge">CSS3 Moderno</span>
+          <span class="tech-badge">JavaScript (ES6+)</span>
+          <span class="tech-badge">GSAP 3 (GreenSock)</span>
+          <span class="tech-badge">Bootstrap 5</span>
+          <span class="tech-badge">Git & GitHub</span>
+          <span class="tech-badge">GitFlow</span>
+          <span class="tech-badge">GitHub Pages</span>
+        </div>
+      </section>
+
+      <!-- Seção Links de Contato -->
+      <section class="card-box">
+        <h2 class="card-title">
+          <span class="icon-heading">🌐</span> Conecte-se comigo
+        </h2>
+        <div class="contact-links">
+          <a href="https://github.com/cauanRkozerski" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            <span>GitHub (cauanRkozerski)</span>
+            <span>GitHub: github.com/cauanRkozerski</span>
           </a>
 
-          <a href="mailto:cauanroza.k@gmail.com" class="link-item">
-            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <a href="mailto:cauanroza.k@gmail.com" class="contact-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
             <span>E-mail: cauanroza.k@gmail.com</span>
           </a>
 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-item">
-            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0-.01-3.28 1.64 1.64 0 0 0 .01 3.28m-1.39 9.74h2.79v-8.37H5.07v8.37z"/>
+          <a href="https://github.com/cauanRkozerski/My-Head" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
             </svg>
-            <span>LinkedIn</span>
+            <span>Repositório do Trabalho: cauanRkozerski/My-Head</span>
           </a>
         </div>
       </section>
 
-      <!-- Seção Tecnologias -->
-      <section id="tecnologias" class="card">
-        <h2>💻 Conhecimentos e Tecnologias</h2>
-        <div class="skills-grid">
-          <span class="badge">HTML5</span>
-          <span class="badge">CSS3</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">Git & GitHub</span>
-          <span class="badge">SQL / Modelagem de Dados</span>
-          <span class="badge">Python</span>
-        </div>
-      </section>
-
-      <!-- Seção Projetos -->
-      <section id="projetos" class="card">
-        <h2>🚀 Projetos Acadêmicos</h2>
-        <ul class="projects-list">
-          <li>
-            <strong>My-Head:</strong> Página de perfil com GitFlow e GitHub Pages.
-          </li>
-          <li>
-            <strong>Mobile Banking App:</strong> Estudo de interface e fluxo de transações bancárias.
-          </li>
-          <li>
-            <strong>Automação Web:</strong> Testes e automações com WebDriver.
-          </li>
-        </ul>
+      <!-- Documentação Complementar / Aula Anterior -->
+      <section class="card-box">
+        <h2 class="card-title">
+          <span class="icon-heading">📁</span> Recurso Complementar
+        </h2>
+        <a href="readme.html" class="doc-link-card">
+          <div class="doc-link-text">
+            <h4>Documento README Original (Aula Anterior)</h4>
+            <p>Visualizar o arquivo de instrução do head-spinning com demonstração em GIF.</p>
+          </div>
+          <span>➜</span>
+        </a>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Cauan Roza Kozerski • Sistemas de Informação</p>
+    <footer class="page-footer">
+      <p>&copy; 2026 Cauan Roza Kozerski &bull; Sistemas de Informação &bull; Prática de GitFlow & GitHub Pages</p>
     </footer>
+
   </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- GSAP 3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- Script Principal -->
+  <script src="js/main.js"></script>
 </body>
 </html>
