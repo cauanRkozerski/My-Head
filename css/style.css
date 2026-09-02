@@ -1,0 +1,312 @@
+:root {
+  --bg-main: #0b0f19;
+  --bg-card: #151d30;
+  --bg-card-hover: #1c2742;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-cyan: #38bdf8;
+  --accent-blue: #2563eb;
+  --accent-purple: #818cf8;
+  --border-color: #23304d;
+  --border-glow: rgba(56, 189, 248, 0.3);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.2);
+  --radius-lg: 16px;
+  --radius-sm: 8px;
+  --transition: all 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+}
+
+.main-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Hero & Componente Head-Spinning
+   ========================================================================== */
+.hero-section {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+}
+
+.spinning-frame {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.head-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-cyan);
+  box-shadow: var(--shadow-glow);
+  cursor: pointer;
+  background-color: #1e293b;
+  display: block;
+}
+
+.head-avatar:hover {
+  border-color: #7dd3fc;
+}
+
+.animation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctrl-btn {
+  background: #1e293b;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ctrl-btn:hover {
+  background: var(--accent-cyan);
+  color: #0b0f19;
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+.speed-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-glow);
+  border-radius: 20px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.profile-role {
+  color: var(--accent-cyan);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.profile-tagline {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Cards de Conteúdo
+   ========================================================================== */
+.card-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card-box:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title .icon-heading {
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Links Sociais / Contatos
+   ========================================================================== */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(11, 15, 25, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.contact-btn:hover {
+  background: var(--accent-cyan);
+  color: #0b0f19;
+  border-color: var(--accent-cyan);
+  transform: translateX(5px);
+}
+
+.contact-btn svg {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Badges de Tecnologias
+   ========================================================================== */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tech-badge {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Lista de Práticas GitFlow
+   ========================================================================== */
+.gitflow-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.gitflow-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.gitflow-list li strong {
+  color: var(--text-primary);
+}
+
+.gitflow-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Documentação Complementar
+   ========================================================================== */
+.doc-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(129, 140, 248, 0.08);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.doc-link-card:hover {
+  background: rgba(129, 140, 248, 0.18);
+  border-color: var(--accent-purple);
+}
+
+.doc-link-text h4 {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.doc-link-text p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.page-footer {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+}
