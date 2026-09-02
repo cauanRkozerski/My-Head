@@ -107,6 +107,80 @@ body {
   gap: 0.5rem;
 }
 
+/* Links & Contato */
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.link-item:hover {
+  background-color: var(--primary);
+  color: #0f172a;
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+/* Badges / Habilidades */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Projetos */
+.projects-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.projects-list li {
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--text-muted);
+}
+
+.projects-list li strong {
+  color: var(--text-main);
+}
+
+.projects-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
 /* Footer */
 footer {
   text-align: center;
